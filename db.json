@@ -1,60 +1,72 @@
 {
-    "events": [
-      {
-        "id": 1,
-        "name": "React Conference",
-        "date": "2024-09-10",
-        "description": "A conference about React.",
-        "location": "New York",
-        "rsvps": []
-      },
-      {
-        "id": 2,
-        "name": "JavaScript Summit",
-        "date": "2024-09-20",
-        "description": "A summit for JavaScript developers.",
-        "location": "San Francisco",
-        "rsvps": []
-      },
-      {
-        "id": 3,
-        "name": "Web Development Bootcamp",
-        "date": "2024-10-05",
-        "description": "An intensive bootcamp for aspiring web developers.",
-        "location": "Chicago",
-        "rsvps": []
-      },
-      {
-        "id": 4,
-        "name": "UI/UX Design Workshop",
-        "date": "2024-10-15",
-        "description": "A hands-on workshop focused on UI/UX design principles.",
-        "location": "Los Angeles",
-        "rsvps": []
-      },
-      {
-        "id": 5,
-        "name": "Tech Leadership Conference",
-        "date": "2024-11-01",
-        "description": "A conference for tech leaders and managers.",
-        "location": "Boston",
-        "rsvps": []
-      },
-      {
-        "id": 6,
-        "name": "Startup Pitch Event",
-        "date": "2024-11-20",
-        "description": "An event where startups pitch their ideas to investors.",
-        "location": "Austin",
-        "rsvps": []
-      },
-      {
-        "id": 7,
-        "name": "Cybersecurity Symposium",
-        "date": "2024-12-10",
-        "description": "A symposium on the latest trends and challenges in cybersecurity.",
-        "location": "Washington, D.C.",
-        "rsvps": []
-      }
-    ]
-  }
+  "events": [
+    {
+      "id": "1",
+      "name": "React Conference",
+      "date": "2024-09-10",
+      "description": "A conference about React.",
+      "location": "New York",
+      "rsvps": [
+        {
+          "name": "Sharon",
+          "email": "sharonmawia76@gmail.com",
+          "response": "yes"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "JavaScript Summit",
+      "date": "2024-09-20",
+      "description": "A summit for JavaScript developers.",
+      "location": "San Francisco",
+      "rsvps": []
+    },
+    {
+      "id": "3",
+      "name": "Web Development Bootcamp",
+      "date": "2024-10-05",
+      "description": "An intensive bootcamp for aspiring web developers.",
+      "location": "Chicago",
+      "rsvps": []
+    },
+    {
+      "id": "4",
+      "name": "UI/UX Design Workshop",
+      "date": "2024-10-15",
+      "description": "A hands-on workshop focused on UI/UX design principles.",
+      "location": "Los Angeles",
+      "rsvps": [
+        {
+          "name": "Sharon",
+          "email": "sharonmawia76@gmail.com",
+          "response": "yes"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Tech Leadership Conference",
+      "date": "2024-11-01",
+      "description": "A conference for tech leaders and managers.",
+      "location": "Boston",
+      "rsvps": []
+    },
+    {
+      "id": "6",
+      "name": "Startup Pitch Event",
+      "date": "2024-11-20",
+      "description": "An event where startups pitch their ideas to investors.",
+      "location": "Austin",
+      "rsvps": []
+    },
+    {
+      "id": "7",
+      "name": "Cybersecurity Symposium",
+      "date": "2024-12-10",
+      "description": "A symposium on the latest trends and challenges in cybersecurity.",
+      "location": "Washington, D.C.",
+      "rsvps": []
+    }
+  ]
+}

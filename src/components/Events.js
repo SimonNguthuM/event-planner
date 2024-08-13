@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
 
 const Events = () => {
   const [events, setEvents] = useState([]);
@@ -17,7 +19,8 @@ const Events = () => {
         {events.map(event => (
           <li key={event.id}>
             <h2>{event.name}</h2>
-            <button>View</button>            
+            <button>View</button> 
+            <Link to={`/events/${event.id}/rsvp`}>RSVP</Link> 
           </li>
         ))}
       </ul>
