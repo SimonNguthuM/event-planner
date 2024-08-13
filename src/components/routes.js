@@ -18,7 +18,6 @@ const routes = [
       path: "/events/:id",  
       element: <EventDetails />,
     }
-
   ];
   
   export default routes;
