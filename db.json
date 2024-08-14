@@ -28,7 +28,13 @@
       "date": "2024-10-05",
       "description": "An intensive bootcamp for aspiring web developers.",
       "location": "Chicago",
-      "rsvps": []
+      "rsvps": [
+        {
+          "name": "jdd",
+          "email": "jnsjs@gmail.com",
+          "response": "no"
+        }
+      ]
     },
     {
       "id": "4",
