@@ -11,7 +11,8 @@ const Navbar = () => {
   return (
     <nav className='navbar'>
       <Link to="/">Home</Link>
-      <button onClick={handleLoginClick}>Login</button>
+      <Link to="/about">About</Link>
+      <button className="login-button" onClick={handleLoginClick}>Admin Login</button>
     </nav>
   );
 };

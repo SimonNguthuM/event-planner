@@ -15,18 +15,26 @@ const Events = () => {
 
   const handleViewClick = (eventId) => {
     navigate(`/events/${eventId}`);
-  };
+  }
+
+  const handleAddEventClick = () => {
+    navigate("/addevent"); 
+  }
 
   return (
     <div className='event-list'>
       <h1>Event-Planner Elite</h1>
-      <h2>Events</h2>
-      <ul>
+      <header className='header'>
+        <h2>Events</h2>
+        <button className='add-event-button' onClick={handleAddEventClick}>Add an Event</button>
+      </header>
+      <ul className='list'>
         {events.map(event => (
           <li key={event.id}>
             <h2>{event.name}</h2>
-            <button onClick={() => handleViewClick(event.id)}>View</button> 
+            <button className= "view-btn" onClick={() => handleViewClick(event.id)}>View</button> 
             <Link to={`/events/${event.id}/rsvp`}>RSVP</Link> 
+            <button className='delete-btn'>Delete</button>
           </li>
         ))}
       </ul>

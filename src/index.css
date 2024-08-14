@@ -24,10 +24,33 @@ code {
   top: 0;
   z-index: 1000;
 }
+
 .navbar a {
   color: white; 
   text-decoration: none;
   margin-right: auto; 
+}
+
+.login-button {
+  padding: 8px;
+  border-radius: 2px;
+  border: none;
+  background-color: rgb(229, 162, 229);
+  color: white;
+  cursor: pointer;
+}
+
+.delete-btn {
+  padding: 8px;
+  border-radius: 2px;
+  border: none;
+  background-color: rgb(229, 162, 229);
+  color: white;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: red;
 }
 
 .forms {
@@ -42,3 +65,157 @@ code {
 .event-list{
   margin-top: 40px; 
 }
+
+.adder{
+  margin-top: 50px; 
+}
+
+.adder form {
+  display: flex;
+  flex-direction: column; 
+  width: 30%;
+}
+
+.adder button {
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.adder button:hover {
+  background-color: #0056b3;
+}
+
+.adder input,
+.adder textarea {
+  margin-bottom: 15px; 
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.adder textarea {
+  resize: vertical; 
+}
+
+
+.event-list {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #faf9f7;
+  border: 3px solid #161616;
+  border-radius: 12px;
+}
+
+.event-list li {
+  position: relative;
+  border-bottom: 2px solid #f2b900;
+  padding: 15px 0;
+}
+
+.delete-btn {
+  position: absolute;
+  right: 0; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  margin-left: 10px; 
+}
+
+.view-btn, .event-list a {
+  margin-right: 10px; 
+}
+
+.event-list h2 {
+  font-size: 26px;
+  color: #333;
+  margin: 0;
+  font-weight: bold;
+}
+
+.view-btn {
+  background-color: #0018f2;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+.event-list a {
+  color: #14f200;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.event-list a:hover {
+  text-decoration: underline;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px; 
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.add-event-button {
+  background-color: #eea2de; 
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-event-button:hover {
+  background-color: #f79d9a; 
+}
+
+.content {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #fffbf0;
+  border: 2px solid #c7f0b7;
+  border-radius: 10px;
+}
+
+.content h1 {
+  font-size: 34px;
+  color: #61daff;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.content p {
+  font-size: 19px;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* about css */
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; 
+  justify-content: center;
+  margin-top: 20px;
+}
+.team img {
+    flex: 1 1 calc(33.333% - 20px); 
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+

@@ -8,7 +8,6 @@ const EventDetails = () => {
   const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
-
     fetch(`http://localhost:3000/events/${id}`)
       .then(response => response.json())
       .then(data => {
@@ -29,6 +28,8 @@ const EventDetails = () => {
     return <div>No event found.</div>; 
   }
 
+  const rsvps = event.rsvps || []; 
+
   return (
     <div>
       <Navbar />
@@ -39,8 +40,8 @@ const EventDetails = () => {
         <p>Location: {event.location}</p>
         <h2>RSVPs:</h2>
         <ul>
-          {event.rsvps.length > 0 ? (
-            event.rsvps.map((rsvp, index) => (
+          {rsvps.length > 0 ? (
+            rsvps.map((rsvp, index) => (
               <li key={index}>
                 {rsvp.name} ({rsvp.email}) - {rsvp.response === 'yes' ? 'Attending' : 'Not Attending'}
               </li>

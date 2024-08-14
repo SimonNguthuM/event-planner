@@ -79,6 +79,27 @@
           "response": "yes"
         }
       ]
+    },
+    {
+      "id": "3de2",
+      "name": "hsd",
+      "date": "2024-08-08",
+      "description": "ddjdjd",
+      "location": "Nai"
+    },
+    {
+      "id": "37c7",
+      "name": "bsdjb",
+      "date": "2024-08-03",
+      "description": "jbsdvj",
+      "location": "jbxdvj",
+      "rsvps": [
+        {
+          "name": "sv",
+          "email": "sc@gmail.com",
+          "response": "yes"
+        }
+      ]
     }
   ]
 }

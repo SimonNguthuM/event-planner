@@ -2,6 +2,8 @@ import Home from "../pages/Home";
 import RSVPForm from "../pages/RSVPForm"
 import EventDetails from "../pages/EventDetails";
 import Login from "../pages/Login"
+import EventAdd from "./EventAdd"
+import About from "../pages/about";
 
 
 const routes = [
@@ -21,7 +23,16 @@ const routes = [
     {
       path: "/login",  
       element: <Login />,
+    },
+    {
+      path: "/addevent",  
+      element: <EventAdd/>,
+    },
+    {
+      path: "/about",  
+      element: <About/>,
     }
+
   ];
   
   export default routes;
