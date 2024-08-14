@@ -6,7 +6,6 @@ function Home (){
     return (
     <div>
         <Navbar />
-        <h1>Event-Planner Elite</h1>
         <Events />
     </div>)
 }

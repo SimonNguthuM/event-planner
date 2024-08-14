@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Navbar from '../components/Navbar';
 
 function Login() {
   const [showLogin, setShowLogin] = useState(true);
@@ -62,6 +63,7 @@ function Login() {
 
   return (
     <div className="auth-buttons-container">
+      <Navbar />
       <button onClick={() => setShowLogin(true)}>Login</button>
       <button onClick={() => setShowLogin(false)}>Register</button>
 

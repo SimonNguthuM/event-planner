@@ -72,7 +72,13 @@
       "date": "2024-12-10",
       "description": "A symposium on the latest trends and challenges in cybersecurity.",
       "location": "Washington, D.C.",
-      "rsvps": []
+      "rsvps": [
+        {
+          "name": "Gg",
+          "email": "GG@GMAIL.COM",
+          "response": "yes"
+        }
+      ]
     }
   ]
 }

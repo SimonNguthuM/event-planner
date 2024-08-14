@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Navbar from '../components/Navbar';
 import { useParams, useNavigate } from 'react-router-dom';
 
 const RSVPForm = () => {
@@ -28,7 +29,8 @@ const RSVPForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="forms" onSubmit={handleSubmit}>
+      <Navbar />
       <h2>RSVP for Event</h2>
       <label>
         Name:

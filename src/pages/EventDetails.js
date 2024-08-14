@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Navbar from '../components/Navbar';
 import { useParams } from 'react-router-dom';
 
 const EventDetails = () => {
@@ -30,22 +31,25 @@ const EventDetails = () => {
 
   return (
     <div>
-      <h1>{event.name}</h1>
-      <p>Date: {event.date}</p>
-      <p>Description: {event.description}</p>
-      <p>Location: {event.location}</p>
-      <h2>RSVPs:</h2>
-      <ul>
-        {event.rsvps.length > 0 ? (
-          event.rsvps.map((rsvp, index) => (
-            <li key={index}>
-              {rsvp.name} ({rsvp.email}) - {rsvp.response === 'yes' ? 'Attending' : 'Not Attending'}
-            </li>
-          ))
-        ) : (
-          <li>No RSVPs yet.</li>
-        )}
-      </ul>
+      <Navbar />
+      <div className="content">
+        <h1>{event.name}</h1>
+        <p>Date: {event.date}</p>
+        <p>Description: {event.description}</p>
+        <p>Location: {event.location}</p>
+        <h2>RSVPs:</h2>
+        <ul>
+          {event.rsvps.length > 0 ? (
+            event.rsvps.map((rsvp, index) => (
+              <li key={index}>
+                {rsvp.name} ({rsvp.email}) - {rsvp.response === 'yes' ? 'Attending' : 'Not Attending'}
+              </li>
+            ))
+          ) : (
+            <li>No RSVPs yet.</li>
+          )}
+        </ul>
+      </div>
     </div>
   );
 };
