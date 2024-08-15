@@ -54,7 +54,7 @@ const AddEventForm = () => {
             onChange={handleChange}
             required
           />
-          <textarea
+          <textarea className='textarea'
             name="description"
             placeholder="Description"
             value={formData.description}

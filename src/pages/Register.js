@@ -18,19 +18,19 @@ const Register = () => {
     <Navbar/>
     <div className='register'>
       <h1>Register</h1>
-      <input
+      <input className='username'
         type="text"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
         placeholder="Username"
-      />
-      <input
+      /> <br />
+      <input className='password'
         type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         placeholder="Password"
-      />
-      <button onClick={handleRegister}>Register</button>
+      /><br />
+      <button className='regbtn' onClick={handleRegister}>Register</button>
     </div>
    </>
   )

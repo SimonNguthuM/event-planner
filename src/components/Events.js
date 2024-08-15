@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import Navbar from './Navbar';
 
 const Events = ({ loggedIn }) => {
   const [events, setEvents] = useState([])
@@ -33,7 +34,9 @@ const Events = ({ loggedIn }) => {
   };
 
   return (
-    <div className='event-list'>
+    <>
+      <Navbar />
+      <div className='event-list'>
       <h1 className='hh1'>Event Manager Pro</h1>
       <header className='header'>
         <h2 className='hh2'>Events</h2>
@@ -61,6 +64,7 @@ const Events = ({ loggedIn }) => {
         ))}
       </ul>
     </div>
+  </>
   )
 }
 

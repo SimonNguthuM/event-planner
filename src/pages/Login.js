@@ -23,19 +23,19 @@ const Login = () => {
     <Navbar/>
     <div className='login'>
       <h1>Login</h1>
-      <input
+      <input className='username'
         type="text"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
         placeholder="Username"
-      />
-      <input
+      /> <br />
+      <input className='password'
         type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         placeholder="Password"
-      />
-      <button onClick={handleLogin}>Login</button>
+      /> <br />
+      <button className='loginbtn' onClick={handleLogin}>Login</button>
       {message && <p>{message}</p>}
       <p>Not registered? <a href="/register">Register here</a></p>
     </div>

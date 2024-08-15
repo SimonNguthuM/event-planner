@@ -23,6 +23,14 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   justify-content: space-between; 
 }
+.logout {
+  background-color: #4CAF50; /* New color for the button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 15px; /* Space from the left */
+  cursor: pointer;
+}
 
 .navbar .nav-links {
   display: flex;
@@ -61,13 +69,32 @@ body {
   margin-left: 0;
 }
 .login {
-  margin-top: 80px;
+  margin-top: 60px;
+  text-align: center;
 }
 
 .register {
   margin-top: 80px;
+  text-align: center;
 }
 
+.username, .password {
+ padding: 10px;
+ margin: 5px;
+ width: 30%;
+ border-radius: 5px;
+ border: none;
+}
+
+.loginbtn{
+  background-color: #388e3c;
+  margin: 4px;
+}
+
+.regbtn{
+  background-color: #388e3c;
+  margin-bottom: 5px;
+}
 
 button {
   padding: 12px 24px;
@@ -98,8 +125,13 @@ button {
   transform: scale(1.05);
 }
 
+.rsvp{
+  text-align: center;
+}
+
 .rsvp-btn {
   background-color: #4caf50;
+  margin-bottom: 5px;
 }
 
 .rsvp-btn:hover {
@@ -116,6 +148,7 @@ button {
   transform: scale(1.05);
 }
 
+
 .adder, .auth-buttons-container, .rsvp-form {
   margin: 80px auto;
   padding: 30px;
@@ -124,6 +157,12 @@ button {
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center; 
+}
+
+.textarea {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
 }
 
 .adder h2, .auth-buttons-container h2, .rsvp-form h2 {
@@ -176,7 +215,7 @@ button {
 }
 
 .hh1{
-  color: PINK;
+  color: pink;
 }
 
 .hh2{
@@ -310,9 +349,14 @@ button {
 .content ul li:last-child {
   border-bottom: none;
 }
+.options{
+  margin-left: 10px;
+}
+
 .Sub{
-  color: black;
-  background-color: #08d738;
+  color: white;
+  background-color: #0b8611;
+  margin: 8px;
 }
 footer{
   background-color: #edeaea;

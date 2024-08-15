@@ -37,39 +37,43 @@ const RSVPForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <Navbar />
-      <h2>RSVP for Event</h2>
-      <label>
-        Name:
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
-      </label>
-      <br />
-      <label>
-        Email:
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-      </label>
-      <br />
-      <label>
-        Will you attend?
-        <select value={response} onChange={(e) => setResponse(e.target.value)}>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-        </select>
-      </label>
-      <br />
-      <button className="Sub" type="submit">Submit RSVP</button>
-    </form>
+    <>
+    <Navbar />
+    <div className='rsvp'>
+      <form onSubmit={handleSubmit}>
+        <h2>RSVP for Event</h2>
+        <label>
+          Name:
+          <input className='username'
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+        </label>
+        <br />
+        <label>
+          Email:
+          <input className='password'
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </label>
+        <br />
+        <label>
+          Will you attend?
+          <select className='options' value={response} onChange={(e) => setResponse(e.target.value)}>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </label>
+        <br />
+        <button className="Sub" type="submit">Submit RSVP</button>
+      </form>
+    </div>
+    </>
   )
 }
 
