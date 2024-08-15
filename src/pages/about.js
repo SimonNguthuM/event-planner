@@ -1,11 +1,11 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 
-const About = () => {
+const about = () => {
     return (
         <>
         <Navbar />
-        <div style={{ padding: '20px' }}>
+        <div className="section"style={{ padding: '20px' }}>
             <h1>About Us</h1>
             <h2>Discover the Ultimate Event Management Experience!</h2>
             <p>Welcome to <b>EventMaster Pro</b> your go-to solution for effortlessly creating, managing, and experiencing unforgettable events. Whether you're planning an intimate gathering, a corporate seminar, or a grand celebration, our app is designed to make event management a breeze.</p>
@@ -36,37 +36,23 @@ const About = () => {
                 <ul>
                     <p><b>Enhanced Visibility:</b></p>
                     <p>Showcase your events in a captivating way with our elegant and user-friendly design. Attract attention and make a lasting impression with a professional presentation that’s sure to impress.</p>
-                </ul>
-                <h3>Meet our friendly team</h3>
-                <div className="team">                
-                <img
-                src="https://p.kindpng.com/picc/s/490-4901631_upcoming-events-image-free-clipart-png-download-upcoming.png"
-                alt="Upcoming Events" 
-                />
-                <img
-                src="https://p.kindpng.com/picc/s/490-4901631_upcoming-events-image-free-clipart-png-download-upcoming.png"
-                alt="Upcoming Events" 
-            />
-                <img
-                src="https://p.kindpng.com/picc/s/490-4901631_upcoming-events-image-free-clipart-png-download-upcoming.png"
-                alt="Upcoming Events" 
-            />
-                <img
-                src="https://p.kindpng.com/picc/s/490-4901631_upcoming-events-image-free-clipart-png-download-upcoming.png"
-                alt="Upcoming Events" 
-            />
-                <img
-                src="https://st.depositphotos.com/1518767/1390/i/450/depositphotos_13909347-stock-photo-young-employee-standing-upright-in.jpg"
-                alt="Upcoming Events" 
-            /></div>
+                </ul>               
                 <h3>Get Started Today!</h3>
                 <p>Join the growing community of satisfied event organizers who have transformed their event planning experience with EventMaster Pro. We’re committed to providing you with a top-notch service that makes your events truly memorable.</p>
                 <p>Have questions, feedback, or suggestions? We’d love to hear from you! Your input helps us continually improve and tailor our app to better suit your needs.</p>
                 <p>Let’s make your next event extraordinary. Book with us now and see the difference!</p>
             </li>
+            <footer> 
+                &copy;2024 Best Events Solutions
+                <p>EventMasterPro.com Solutions Inc. </p>
+                <p>All Rights Reserved. All other trademarks</p>
+                <p>and copyrights are the property of their</p>
+                <p>respective holders</p>                  
+                
+            </footer>
         </div>
         </>        
     );
 };
 
-export default About;
+export default about;

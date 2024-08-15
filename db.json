@@ -8,8 +8,8 @@
       "location": "New York",
       "rsvps": [
         {
-          "name": "Ajee ",
-          "email": "Ajey@gmail.com",
+          "name": "Sharooo",
+          "email": "Freee@go",
           "response": "yes"
         }
       ]
@@ -30,9 +30,9 @@
       "location": "Chicago",
       "rsvps": [
         {
-          "name": "jdd",
-          "email": "jnsjs@gmail.com",
-          "response": "no"
+          "name": "f",
+          "email": "g@w",
+          "response": "yes"
         }
       ]
     },
@@ -56,7 +56,13 @@
       "date": "2024-11-01",
       "description": "A conference for tech leaders and managers.",
       "location": "Boston",
-      "rsvps": []
+      "rsvps": [
+        {
+          "name": "Joel",
+          "email": "jayjoelpn@gmail.com",
+          "response": "no"
+        }
+      ]
     },
     {
       "id": "6",
@@ -100,6 +106,160 @@
           "response": "yes"
         }
       ]
+    },
+    {
+      "id": "1955",
+      "name": "Sharon",
+      "date": "2024-08-10",
+      "description": "TTNT5",
+      "location": "Sarit"
+    },
+    {
+      "id": "da7e",
+      "name": "TechCrunch Disrupt",
+      "date": "2024-09-05",
+      "description": "An annual technology conference hosted by TechCrunch. It features keynote speakers, startup pitches, and discussions on the latest tech trends.",
+      "location": "San Francisco, CA, USA"
+    },
+    {
+      "id": "cea9",
+      "name": "CES (Consumer Electronics Show)",
+      "date": "2024-08-22",
+      "description": "A global event showcasing the latest in consumer electronics and technology innovations. Exhibitors include leading tech companies and startups.",
+      "location": "Las Vegas, NV, USA"
+    },
+    {
+      "id": "2ee1",
+      "name": "Google I/O",
+      "date": "2024-09-07",
+      "description": "Google’s annual developer conference where new software, tools, and APIs are announced. It includes technical sessions, hands-on labs, and keynote speeches.",
+      "location": "Mountain View, CA, USA"
+    },
+    {
+      "id": "9a28",
+      "name": "Apple WWDC (Worldwide Developers Conference)",
+      "date": "2024-09-19",
+      "description": "Apple’s annual event where new software updates, technologies, and tools for developers are introduced. It includes sessions, workshops, and keynote presentations.",
+      "location": "Cupertino, CA, USA"
+    },
+    {
+      "id": "1647",
+      "name": "Microsoft Ignite",
+      "date": "2024-09-04",
+      "description": "Microsoft’s flagship tech conference for IT professionals and developers. It focuses on Microsoft’s latest products and technologies, including Azure, Windows, and more.",
+      "location": "Orlando, FL, USA"
+    },
+    {
+      "id": "159e",
+      "name": "AWS re",
+      "date": "2024-09-25",
+      "description": "Amazon Web Services’ annual conference for cloud computing, featuring new AWS products, deep-dive technical sessions, and keynotes from industry leaders.",
+      "location": "Las Vegas, NV, USA"
+    },
+    {
+      "id": "b64c",
+      "name": "Black Hat USA",
+      "date": "2024-09-06",
+      "description": "A leading information security conference that focuses on the latest cybersecurity research, trends, and techniques. It features presentations from security experts and practitioners.",
+      "location": "Las Vegas, NV, USA"
+    },
+    {
+      "id": "5496",
+      "name": "DEF CON",
+      "date": "2024-10-30",
+      "description": "One of the world’s largest and most notable hacker conventions. It includes talks, workshops, and competitions focused on security and hacking techniques.",
+      "location": "Las Vegas, NV, USA"
+    },
+    {
+      "id": "9892",
+      "name": "SXSW (South by Southwest)",
+      "date": "2024-10-28",
+      "description": "A conglomeration of film, interactive media, and music festivals and conferences. The tech component includes panels, workshops, and showcases of new technologies and innovations.",
+      "location": "Austin, TX, USA"
+    },
+    {
+      "id": "e79c",
+      "name": "Strata Data & AI Conference",
+      "date": "2024-10-30",
+      "description": "A conference focused on data science, machine learning, and artificial intelligence. It features keynotes, case studies, and hands-on sessions with industry leaders.",
+      "location": "New York, NY, USA"
+    },
+    {
+      "id": "e886",
+      "name": "The Next Web Conference",
+      "date": "2024-10-22",
+      "description": "A technology and business conference focusing on emerging tech trends and the future of the internet. It includes talks from tech leaders and networking opportunities.",
+      "location": "Amsterdam, Netherlands"
+    },
+    {
+      "id": "54b3",
+      "name": "Rise Conference",
+      "date": "2024-10-29",
+      "description": "A global technology conference that brings together startups, investors, and tech leaders. It features keynotes, panel discussions, and networking events.",
+      "location": "Hong Kong, China"
+    },
+    {
+      "id": "36c1",
+      "name": "Google Cloud Next",
+      "date": "2024-10-30",
+      "description": "Google Cloud’s annual event focused on cloud computing innovations, with sessions on product updates, cloud strategy, and practical implementations.",
+      "location": "San Francisco, CA, USA"
+    },
+    {
+      "id": "d563",
+      "name": "Oracle OpenWorld",
+      "date": "2024-09-18",
+      "description": "Oracle’s premier event for business leaders and IT professionals. It covers Oracle’s software and hardware products, including cloud computing, AI, and more.",
+      "location": "San Francisco, CA, USA"
+    },
+    {
+      "id": "7170",
+      "name": "IBM Think",
+      "date": "2024-09-02",
+      "description": "IBM’s annual conference featuring sessions on cloud computing, AI, and data analytics. It includes keynote speeches, product showcases, and breakout sessions.",
+      "location": "San Francisco, CA, USA"
+    },
+    {
+      "id": "368f",
+      "name": "Gartner IT Symposium/Xpo",
+      "date": "2024-10-17",
+      "description": "Gartner’s flagship IT conference that provides insights into technology trends, leadership strategies, and innovation. It includes keynotes, workshops, and networking opportunities.",
+      "location": "Orlando, FL, USA"
+    },
+    {
+      "id": "063e",
+      "name": "TechEd by Microsoft",
+      "date": "2024-11-06",
+      "description": "A conference for IT professionals and developers focusing on Microsoft’s latest technologies, tools, and platforms. It features in-depth technical sessions and hands-on labs.",
+      "location": "Barcelona"
+    },
+    {
+      "id": "2426",
+      "name": "European Women in Technology",
+      "date": "2024-11-06",
+      "description": "A conference dedicated to women in technology, offering keynotes, panel discussions, and workshops to support and inspire women in the tech industry.",
+      "location": "Amsterdam, Netherlands"
+    },
+    {
+      "id": "272e",
+      "name": "Viva Technology",
+      "date": "2024-11-29",
+      "description": "A major European tech event focused on innovation and startups. It features presentations from tech leaders, startup showcases, and networking opportunities.",
+      "location": "Paris, France"
+    },
+    {
+      "id": "da64",
+      "name": "TechFest",
+      "date": "2024-12-12",
+      "description": "A series of tech events held globally that focuses on tech talent, innovation, and industry trends. It includes networking, panel discussions, and product showcases.",
+      "location": "New York"
+    },
+    {
+      "id": "8535",
+      "name": "hhh",
+      "date": "2024-08-15",
+      "description": "hyh",
+      "location": "Nairobi"
     }
   ]
 }

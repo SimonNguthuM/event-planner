@@ -3,7 +3,7 @@ import RSVPForm from "../pages/RSVPForm"
 import EventDetails from "../pages/EventDetails";
 import Login from "../pages/Login"
 import EventAdd from "./EventAdd"
-import About from "../pages/about";
+import About from "../pages/about"
 
 
 const routes = [

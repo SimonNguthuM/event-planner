@@ -29,7 +29,7 @@ const RSVPForm = () => {
   };
 
   return (
-    <form className="forms" onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
       <Navbar />
       <h2>RSVP for Event</h2>
       <label>
@@ -60,7 +60,7 @@ const RSVPForm = () => {
         </select>
       </label>
       <br />
-      <button type="submit">Submit RSVP</button>
+      <button className="Sub"type="submit">Submit RSVP</button>
     </form>
   );
 };

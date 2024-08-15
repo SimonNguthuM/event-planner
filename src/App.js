@@ -1,5 +1,6 @@
 import Home from './pages/Home';
-import Login from './components/Login';
+import Login from './pages/Login';
+import Routes from '../components/routes'
 
 
 function App() {
@@ -7,6 +8,8 @@ function App() {
   <>
     <Home /> 
     <Login />
+    <Routes />
+    <Index />
   </> 
   );
 }
