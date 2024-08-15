@@ -1,6 +1,5 @@
-import React, { useState, useEffect, } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-
 
 const Events = () => {
   const [events, setEvents] = useState([]);
@@ -21,20 +20,41 @@ const Events = () => {
     navigate("/addevent"); 
   }
 
+  const handleDeleteClick = (eventId) => {
+    if (window.confirm('Are you sure you want to delete this event?')) {
+      fetch(`http://localhost:3000/events/${eventId}`, {
+        method: 'DELETE',
+      })
+        .then(() => {
+          setEvents(events.filter(event => event.id !== eventId));
+        })
+        .catch(error => console.error('Error deleting event:', error));
+    }
+  }
+
   return (
     <div className='event-list'>
-      <h1>Event-Planner Elite</h1>
+      <h1 className='hh1'>Event Manager Pro</h1>
       <header className='header'>
-        <h2>Events</h2>
+        <h2 className='hh2'>Events</h2>
         <button className='add-event-button' onClick={handleAddEventClick}>Add an Event</button>
       </header>
       <ul className='list'>
         {events.map(event => (
-          <li key={event.id}>
-            <h2>{event.name}</h2>
-            <button className= "view-btn" onClick={() => handleViewClick(event.id)}>View</button> 
-            <Link to={`/events/${event.id}/rsvp`}>RSVP</Link> 
-            <button className='delete-btn'>Delete</button>
+          <li key={event.id} className='event-item'>
+            <div className='event-details'>
+              <h3 className='event-name'>{event.name}</h3>
+              <div className='event-actions'>
+                <button className="view-btn" onClick={() => handleViewClick(event.id)}>View</button> 
+                <Link to={`/events/${event.id}/rsvp`} className='rsvp-btn'>RSVP</Link> 
+              </div>
+            </div>
+            <button
+              className='delete-btn'
+              onClick={() => handleDeleteClick(event.id)}
+            >
+              Delete
+            </button>
           </li>
         ))}
       </ul>

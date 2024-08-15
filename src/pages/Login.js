@@ -1,96 +1,46 @@
-import React, { useState } from 'react';
-import Navbar from '../components/Navbar';
+import React, { useState } from 'react'
+import Navbar from '../components/Navbar'
+import { useNavigate } from 'react-router-dom'
 
-function Login() {
-  const [showLogin, setShowLogin] = useState(true);
-  const [loginError, setLoginError] = useState('');
-  const [registerError, setRegisterError] = useState('');
+const Login = () => {
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+  const [message, setMessage] = useState('')
+  const navigate = useNavigate()
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    const username = e.target.username.value;
-    const password = e.target.password.value;
-
-    if (username && password) {
-      try {
-        const response = await fetch('/api/login', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ username, password }),
-        });
-        const result = await response.json();
-        if (response.ok) {
-          console.log('Login successful:', result);
-          setLoginError('');
-        } else {
-          setLoginError(result.message || 'Login failed');
-        }
-      } catch (error) {
-        setLoginError('An error occurred');
-      }
+  const handleLogin = () => {
+    const storedUser = JSON.parse(localStorage.getItem('user'))
+    if (storedUser && storedUser.username === username && storedUser.password === password) {
+      localStorage.setItem('loggedIn', true);
+      navigate('/');
     } else {
-      setLoginError('Please fill in all fields');
+      setMessage('Invalid username or password. Please register or try again.')
     }
-  };
-
-  const handleRegister = async (e) => {
-    e.preventDefault();
-    const username = e.target.username.value;
-    const email = e.target.email.value;
-    const password = e.target.password.value;
-
-    if (username && email && password) {
-      try {
-        const response = await fetch('/api/register', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ username, email, password }),
-        });
-        const result = await response.json();
-        if (response.ok) {
-          console.log('Registration successful:', result);
-          setRegisterError('');
-        } else {
-          setRegisterError(result.message || 'Registration failed');
-        }
-      } catch (error) {
-        setRegisterError('An error occurred');
-      }
-    } else {
-      setRegisterError('Please fill in all fields');
-    }
-  };
+  }
 
   return (
-    <div className="auth-buttons-container">
-      <Navbar />
-      <button onClick={() => setShowLogin(true)}>Login</button>
-      <button onClick={() => setShowLogin(false)}>Register</button>
-
-      {showLogin ? (
-        <div>
-          <h2>Login</h2>
-          <form onSubmit={handleLogin} className="auth-form">
-            <input name="username" type="text" placeholder="Username" />
-            <input name="password" type="password" placeholder="Password" />
-            {loginError && <p className="error-text">{loginError}</p>}
-            <button type="submit">Login</button>
-          </form>
-        </div>
-      ) : (
-        <div>
-          <h2>Register</h2>
-          <form onSubmit={handleRegister} className="auth-form">
-            <input name="username" type="text" placeholder="Username" />
-            <input name="email" type="email" placeholder="Email" />
-            <input name="password" type="password" placeholder="Password" />
-            {registerError && <p className="error-text">{registerError}</p>}
-            <button type="submit">Register</button>
-          </form>
-        </div>
-      )}
+    <>
+    <Navbar/>
+    <div className='login'>
+      <h1>Login</h1>
+      <input
+        type="text"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+        placeholder="Username"
+      />
+      <input
+        type="password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        placeholder="Password"
+      />
+      <button onClick={handleLogin}>Login</button>
+      {message && <p>{message}</p>}
+      <p>Not registered? <a href="/register">Register here</a></p>
     </div>
-  );
+    </>
+  )
 }
 
-export default Login;
+export default Login

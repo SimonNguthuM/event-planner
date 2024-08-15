@@ -8,19 +8,21 @@
       "location": "New York",
       "rsvps": [
         {
-          "name": "Sharooo",
-          "email": "Freee@go",
+          "name": "hshs",
+          "email": "sls@gmail.com",
+          "response": "yes"
+        },
+        {
+          "name": "ns",
+          "email": "nss@gmail.com",
+          "response": "yes"
+        },
+        {
+          "name": "new",
+          "email": "new@gmail.com",
           "response": "yes"
         }
       ]
-    },
-    {
-      "id": "2",
-      "name": "JavaScript Summit",
-      "date": "2024-09-20",
-      "description": "A summit for JavaScript developers.",
-      "location": "San Francisco",
-      "rsvps": []
     },
     {
       "id": "3",
@@ -87,32 +89,18 @@
       ]
     },
     {
-      "id": "3de2",
-      "name": "hsd",
-      "date": "2024-08-08",
-      "description": "ddjdjd",
-      "location": "Nai"
-    },
-    {
-      "id": "37c7",
-      "name": "bsdjb",
-      "date": "2024-08-03",
-      "description": "jbsdvj",
-      "location": "jbxdvj",
-      "rsvps": [
-        {
-          "name": "sv",
-          "email": "sc@gmail.com",
-          "response": "yes"
-        }
-      ]
-    },
-    {
       "id": "1955",
       "name": "Sharon",
       "date": "2024-08-10",
       "description": "TTNT5",
-      "location": "Sarit"
+      "location": "Sarit",
+      "rsvps": [
+        {
+          "name": "s",
+          "email": "s@gmail.com",
+          "response": "yes"
+        }
+      ]
     },
     {
       "id": "da7e",
@@ -245,21 +233,14 @@
       "name": "Viva Technology",
       "date": "2024-11-29",
       "description": "A major European tech event focused on innovation and startups. It features presentations from tech leaders, startup showcases, and networking opportunities.",
-      "location": "Paris, France"
-    },
-    {
-      "id": "da64",
-      "name": "TechFest",
-      "date": "2024-12-12",
-      "description": "A series of tech events held globally that focuses on tech talent, innovation, and industry trends. It includes networking, panel discussions, and product showcases.",
-      "location": "New York"
-    },
-    {
-      "id": "8535",
-      "name": "hhh",
-      "date": "2024-08-15",
-      "description": "hyh",
-      "location": "Nairobi"
+      "location": "Paris, France",
+      "rsvps": [
+        {
+          "name": "Sim",
+          "email": "sim@gmail.com",
+          "response": "yes"
+        }
+      ]
     }
   ]
 }

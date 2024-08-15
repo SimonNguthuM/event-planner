@@ -21,6 +21,17 @@ body {
   z-index: 1000;
   padding: 0 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  justify-content: space-between; 
+}
+
+.navbar .nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .login-button {
+  margin-left: auto; 
+  background-color: rgb(253, 149, 248);
 }
 
 .navbar a {
@@ -31,27 +42,30 @@ body {
   transition: color 0.3s ease;
 }
 
+.navbar .username {
+  font-size: 20px;
+  color: #f0f0f0; 
+  margin-left: 70%;
+  font-weight: bold; 
+  background-color: #f17fe8; 
+  padding: 5px 10px; 
+  border-radius: 5px; 
+}
+
 .navbar a:hover {
   color: #e0e0e0;
   text-decoration: underline;
 }
 
-.login-button {
-  background-color: rgb(24, 42, 244);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-  font-size: 16px;
-  margin-bottom: auto;
-  margin-left: 1375px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+.logout{
+  margin-left: 0;
+}
+.login {
+  margin-top: 80px;
 }
 
-.login-button:hover {
-  background-color: #0603da;
-  transform: scale(1.05);
+.register {
+  margin-top: 80px;
 }
 
 
@@ -105,11 +119,11 @@ button {
 .adder, .auth-buttons-container, .rsvp-form {
   margin: 80px auto;
   padding: 30px;
-  max-width: 600px; /* Restrict width */
+  max-width: 600px; 
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center; /* Centered text */
+  text-align: center; 
 }
 
 .adder h2, .auth-buttons-container h2, .rsvp-form h2 {
@@ -157,6 +171,18 @@ button {
   margin-bottom: 15px;
 }
 
+.section{
+  margin-top: 30px;
+}
+
+.hh1{
+  color: PINK;
+}
+
+.hh2{
+  color: pink;
+}
+
 .error-text {
   color: #f11a0a;
   margin-bottom: 15px;
@@ -167,39 +193,25 @@ button {
 .event-list {
   margin: 80px auto; 
   padding: 20px;
-  max-width: 800px;
-  background-color: #ffffff;
+  max-width: 1100px;
+  background-image: url('./images/keith-misner-h0Vxgz5tyXA-unsplash.jpg');
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.event-list h1 {
-  font-size: 36px;
-  color: #007bff;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.event-list .header {
+.event-list .event-details {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
+  flex-direction: column;
+  flex: 1;
 }
 
-.event-list h2 {
-  font-size: 28px;
+.event-list .event-name {
+  font-size: 24px;
+  margin: 0;
   color: #333;
-  margin: 0;
 }
 
-.event-list ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.event-list li {
+.event-list .event-item {
   background-color: #fafafa;
   border-radius: 10px;
   padding: 20px;
@@ -207,16 +219,47 @@ button {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
-.event-list li:nth-child(odd) {
-  background-color: #f5f5f5;
-}
-
-.event-list .btn-group {
+.event-list .event-details {
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  flex: 1;
+}
+.event-list .view-btn, .event-list .rsvp-btn {
+  background-color: #2466f5;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.event-list .view-btn:hover, .event-list .rsvp-btn:hover {
+  background-color: #064ce4;
+  transform: scale(1.05);
+}
+
+.event-list .delete-btn {
+  background-color: #cc1204;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.event-list .delete-btn:hover {
+  background-color: #880404;
+  transform: scale(1.05);
+}
+
+.event-list .event-actions .rsvp-btn {
+  margin-left: 20px; 
 }
 
 .Advimage {

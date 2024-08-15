@@ -11,21 +11,29 @@ const RSVPForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const rsvp = { name, email, response };
+    const newRsvp = { name, email, response };
 
-    fetch(`http://localhost:3000/events/${id}`, {
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ rsvps: [rsvp] })
-    })
+    fetch(`http://localhost:3000/events/${id}`)
+      .then(response => response.json())
+      .then(event => {
+        const updatedRsvps = [...event.rsvps, newRsvp];
+
+        return fetch(`http://localhost:3000/events/${id}`, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ rsvps: updatedRsvps })
+        });
+      })
       .then(response => response.json())
       .then(() => {
         alert('RSVP submitted successfully!');
         navigate(`/events/${id}`);
       })
-      .catch(error => console.error('Error submitting RSVP:', error));
+      .catch(error => {
+        console.error('Error submitting RSVP:', error);
+      });
   };
 
   return (
@@ -60,7 +68,7 @@ const RSVPForm = () => {
         </select>
       </label>
       <br />
-      <button className="Sub"type="submit">Submit RSVP</button>
+      <button className="Sub" type="submit">Submit RSVP</button>
     </form>
   );
 };
