@@ -19,7 +19,7 @@ body {
   top: 0;
   left: 0;
   z-index: 1000;
-  padding: 0 20px;
+  padding: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   justify-content: space-between; 
 }
@@ -27,8 +27,9 @@ body {
   background-color: #4CAF50; /* New color for the button */
   color: white;
   border: none;
-  padding: 10px 20px;
-  margin-left: 15px; /* Space from the left */
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-right: 10px; /* Space from the left */
   cursor: pointer;
 }
 
@@ -38,7 +39,7 @@ body {
 }
 
 .navbar .login-button {
-  margin-left: auto; 
+  margin-right: 10px; 
   background-color: rgb(253, 149, 248);
 }
 
@@ -51,12 +52,12 @@ body {
 }
 
 .navbar .username {
-  font-size: 20px;
+  font-size: 15px;
   color: #f0f0f0; 
+  text-align: center;
   margin-left: 70%;
-  font-weight: bold; 
-  background-color: #f17fe8; 
-  padding: 5px 10px; 
+  background-color: #cd842c; 
+  padding: 5px; 
   border-radius: 5px; 
 }
 
