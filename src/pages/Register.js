@@ -10,7 +10,7 @@ const Register = () => {
   const handleRegister = () => {
     localStorage.setItem('user', JSON.stringify({ username, password }))
     localStorage.setItem('loggedIn', false)
-    navigate('/login');
+    navigate('/login')
   }
 
   return (
@@ -33,7 +33,7 @@ const Register = () => {
       <button onClick={handleRegister}>Register</button>
     </div>
    </>
-  );
-};
+  )
+}
 
 export default Register

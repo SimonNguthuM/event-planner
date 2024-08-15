@@ -1,13 +1,31 @@
-import React from "react"
-import Events from "../components/Events"
-import Navbar from "../components/Navbar"
+import React, { useState, useEffect } from 'react'
+import Events from '../components/Events'
+import Navbar from '../components/Navbar'
 
-function Home (){
-    return (
+function Home() {
+  const [loggedIn, setLoggedIn] = useState(localStorage.getItem('loggedIn') === 'true')
+
+  useEffect(() => {
+    const handleStorageChange = () => {
+      setLoggedIn(localStorage.getItem('loggedIn') === 'true')
+    }
+
+    window.addEventListener('storage', handleStorageChange);
+    return () => window.removeEventListener('storage', handleStorageChange)
+  }, [])
+
+  const handleLogout = () => {
+    localStorage.removeItem('loggedIn')
+    localStorage.removeItem('user')
+    setLoggedIn(false)
+  }
+
+  return (
     <div>
-        <Navbar />
-        <Events />
-    </div>)
+      <Navbar onLogout={handleLogout} />
+      <Events loggedIn={loggedIn} />
+    </div>
+  )
 }
 
 export default Home

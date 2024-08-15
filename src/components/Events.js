@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
-const Events = () => {
-  const [events, setEvents] = useState([]);
+const Events = ({ loggedIn }) => {
+  const [events, setEvents] = useState([])
   const navigate = useNavigate();
 
   useEffect(() => {
     fetch('http://localhost:3000/events')
       .then(response => response.json())
       .then(data => setEvents(data))
-      .catch(error => console.error('Error fetching events:', error));
+      .catch(error => console.error('Error fetching events:', error))
   }, []);
 
   const handleViewClick = (eventId) => {
     navigate(`/events/${eventId}`);
-  }
+  };
 
   const handleAddEventClick = () => {
-    navigate("/addevent"); 
-  }
+    navigate('/addevent');
+  };
 
   const handleDeleteClick = (eventId) => {
     if (window.confirm('Are you sure you want to delete this event?')) {
@@ -26,11 +26,11 @@ const Events = () => {
         method: 'DELETE',
       })
         .then(() => {
-          setEvents(events.filter(event => event.id !== eventId));
+          setEvents(events.filter(event => event.id !== eventId))
         })
-        .catch(error => console.error('Error deleting event:', error));
+        .catch(error => console.error('Error deleting event:', error))
     }
-  }
+  };
 
   return (
     <div className='event-list'>
@@ -45,21 +45,23 @@ const Events = () => {
             <div className='event-details'>
               <h3 className='event-name'>{event.name}</h3>
               <div className='event-actions'>
-                <button className="view-btn" onClick={() => handleViewClick(event.id)}>View</button> 
-                <Link to={`/events/${event.id}/rsvp`} className='rsvp-btn'>RSVP</Link> 
+                <button className="view-btn" onClick={() => handleViewClick(event.id)}>View</button>
+                {loggedIn && <Link to={`/events/${event.id}/rsvp`} className='rsvp-btn'>RSVP</Link>}
               </div>
             </div>
-            <button
-              className='delete-btn'
-              onClick={() => handleDeleteClick(event.id)}
-            >
-              Delete
-            </button>
+            {loggedIn && (
+              <button
+                className='delete-btn'
+                onClick={() => handleDeleteClick(event.id)}
+              >
+                Delete
+              </button>
+            )}
           </li>
         ))}
       </ul>
     </div>
-  );
-};
+  )
+}
 
-export default Events;
+export default Events

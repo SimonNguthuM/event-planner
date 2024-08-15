@@ -1,10 +1,10 @@
-import Home from "../pages/Home";
+import Home from "../pages/Home"
 import RSVPForm from "../pages/RSVPForm"
-import EventDetails from "../pages/EventDetails";
+import EventDetails from "../pages/EventDetails"
 import Login from "../pages/Login"
 import EventAdd from "./EventAdd"
 import About from "../pages/about"
-import Register from "../pages/Register";
+import Register from "../pages/Register"
 
 
 const routes = [
@@ -36,5 +36,6 @@ const routes = [
     path: "/about",
     element: <About />,
   }
-];
-  export default routes;
+]
+
+export default routes

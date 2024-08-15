@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({ onLogout }) => {
   const navigate = useNavigate();
-  const loggedIn = localStorage.getItem('loggedIn') === 'true';
+  const loggedIn = localStorage.getItem('loggedIn') === 'true'
   const user = JSON.parse(localStorage.getItem('user'));
 
   const handleLoginClick = () => {
@@ -11,9 +11,8 @@ const Navbar = () => {
   };
 
   const handleLogout = () => {
-    localStorage.removeItem('loggedIn');
-    localStorage.removeItem('user');
-    navigate('/');
+    onLogout()
+    navigate('/')
   };
 
   return (
@@ -25,13 +24,13 @@ const Navbar = () => {
       {loggedIn ? (
         <>
           <span className='username'>{user.username}</span>
-          <button className= 'logout' onClick={handleLogout}>Logout</button>
+          <button className='logout' onClick={handleLogout}>Logout</button>
         </>
       ) : (
-        <button className="login-button" onClick={handleLoginClick}>🙎‍♂️Admin Login</button>
+        <button className="login-button" onClick={handleLoginClick}>🙎‍♂️User Login</button>
       )}
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
